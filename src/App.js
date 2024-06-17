@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Navigate, Route, Routes } from 'react-router-dom';
 import SideBar from './Pages/Dashboard/Index';
 import config from './Config';
 import "bootstrap/dist/css/bootstrap.min.css"
@@ -10,7 +10,7 @@ import Layout from './Components/Layout/Layout';
 function App() {
   return (
     <div>
-       <BrowserRouter>
+       <Router>
         <Routes>
         <Route path={`${config.appurl}`} element={<Layout />}>
           <Route exact index element={<DashboardIndex />} /> 
@@ -24,7 +24,7 @@ function App() {
             element={<Navigate to="/admin/dashboard" replace />}
           />
         </Routes>
-      </BrowserRouter>
+      </Router>
     </div>
   );
 }
