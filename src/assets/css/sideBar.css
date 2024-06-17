@@ -1,0 +1,70 @@
+:root {
+    --bg-body : #121418;
+}
+.sidebar-container {
+    width: 5vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--bg-body);
+}
+.main-card-bg {
+    background-color: var(--bg-body);
+
+}
+ .active {
+  position: relative;
+  width: 100% !important; 
+}
+
+.active i {
+  position: relative;
+  z-index: 1; 
+  color: #446d9b !important;
+}
+i {
+    font-size: .85rem !important;
+
+}
+
+.active::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 100%; 
+  border-right: 4px solid #446d9b; 
+  z-index: 0; 
+  width:0; 
+} 
+
+.sector-performance button  {
+    background: linear-gradient(to right, var(--bg-body), #1c332b);
+    color: #01ffa6;
+    border: none; /* Remove default border if any */
+    font-size: 16px; /* Adjust the font size */
+    cursor: pointer; /* Add a pointer cursor on hover */
+    padding-top: .31rem;
+    padding-bottom: .31rem;
+    box-shadow: none;
+   
+}
+.sector-performance button:hover {
+    color: white !important;
+}
+
+.table-hover > tbody > tr:hover > * {
+    --bs-table-color-state: #222  !important;
+    --bs-table-bg-state: #222 !important;
+  }
+  .table-hover > tbody > tr > td:first-child {
+    border-top-left-radius: 0.5rem !important;
+    border-bottom-left-radius: 0.5rem !important;
+}
+
+.table-hover > tbody > tr > td:last-child {
+    border-top-right-radius: 0.5rem !important;
+    border-bottom-right-radius: 0.5rem !important;
+}
